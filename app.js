@@ -8,7 +8,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(process.env.MONGOLAB_URI || process.env.MONGO_URL);
 
 var app = express();
 
@@ -26,7 +26,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
-app.use('/todos', require('./routes/todos'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

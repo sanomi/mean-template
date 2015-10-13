@@ -1,11 +1,5 @@
-# Todo Test
+# Fullstack MEAN Template
 
-To get this working, do `npm run setup`, which will install all required dependencies.
+Setup:  `npm run setup` to reset and install all dependencies.
 
-You must also create a file called `.env` in the root of the project, and add your mongo url, like this:
-
-
-.env
-```
-MONGO_URL=mongodb://localhost/todoapp
-```
+To start up:  `npm start` or `nodemon`.  The server will be available at `localhost:3000`.
