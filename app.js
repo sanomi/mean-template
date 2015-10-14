@@ -24,6 +24,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// passport stuff!~
+var passport = require('passport');
+require('./config/passport');
+app.use(passport.initialize());
+
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 
