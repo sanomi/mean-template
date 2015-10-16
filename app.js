@@ -31,6 +31,7 @@ app.use(passport.initialize());
 
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
+app.use('/files', require('./routes/files'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
